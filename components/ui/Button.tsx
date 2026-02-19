@@ -1,0 +1,37 @@
+import React from "react";
+
+type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonSize = "sm" | "md" | "lg";
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  fullWidth?: boolean;
+};
+
+const Button = ({
+  variant = "primary",
+  size = "md",
+  fullWidth = false,
+  className = "",
+  children,
+  ...props
+}: ButtonProps) => {
+  const classes = [
+    "btn",
+    `btn--${variant}`,
+    `btn--${size}`,
+    fullWidth ? "btn--fullWidth" : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <button className={classes} {...props}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;
