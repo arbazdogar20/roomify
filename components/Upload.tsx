@@ -44,7 +44,10 @@ const Upload = ({ onComplete }: UploadProps) => {
     setFile(selectedFile);
 
     const reader = new FileReader();
-
+    reader.onerror = () => {
+      setFile(null);
+      setProgress(0);
+    };
     reader.onload = () => {
       const base64Data = typeof reader.result === "string" ? reader.result : "";
 
