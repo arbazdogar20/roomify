@@ -110,15 +110,14 @@ const Upload = ({ onComplete }: UploadProps) => {
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-
-    if (!isSignedIn) {
-      return;
-    }
-
     setIsDragging(false);
-    const selectedFile = event.dataTransfer.files?.[0];
 
-    if (!selectedFile) {
+    if (!isSignedIn) return;
+
+    const selectedFile = event.dataTransfer.files?.[0];
+    const allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+
+    if (!selectedFile || !allowedTypes.includes(selectedFile.type)) {
       return;
     }
 
