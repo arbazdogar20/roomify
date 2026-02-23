@@ -2,7 +2,7 @@
 
 ### AI-powered interior visualization for faster design decisions.
 
-Roomify transforms a single room photo into polished, AI-generated design concepts and interactive before/after comparisons helping users visualize renovation outcomes in minutes.
+Roomify is an AI-first interior design tool that transforms your ideas into stunning, functional spaces in seconds. Whether you're a professional designer or simply creating your dream home, Roomify makes it effortless to bring your vision to life.
 
 ---
 
@@ -57,16 +57,6 @@ npm run start
 
 ## 📈 Opportunity
 
-Roomify sits at the intersection of AI, design, and real estate enablement—ideal for products focused on home improvement workflows, design previews, and faster purchase confidence.
-
-## 🤝 Team & Hiring Signal
-
-This project demonstrates practical strengths in:
-
-- Product-oriented AI UX
-- Frontend architecture and performance-minded implementation
-- Shipping polished, user-facing experiences quickly
-
----
+## Roomify sits at the intersection of AI, design, and real estate enablement—ideal for products focused on home improvement workflows, design previews, and faster purchase confidence.
 
 **Roomify** — from raw room photos to confident design decisions.
