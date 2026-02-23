@@ -57,6 +57,6 @@ npm run start
 
 ## 📈 Opportunity
 
-## Roomify sits at the intersection of AI, design, and real estate enablement—ideal for products focused on home improvement workflows, design previews, and faster purchase confidence.
+## Roomify sits at the intersection of AI, design, and real estate enablement ideal for products focused on home improvement workflows, design previews, and faster purchase confidence.
 
 **Roomify** — from raw room photos to confident design decisions.
