@@ -1,87 +1,72 @@
-# Welcome to React Router!
+# Roomify
 
-A modern, production-ready template for building full-stack React applications using React Router.
+### AI-powered interior visualization for faster design decisions.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Roomify transforms a single room photo into polished, AI-generated design concepts and interactive before/after comparisons helping users visualize renovation outcomes in minutes.
 
-## Features
+---
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## ✨ Why Roomify
 
-## Getting Started
+- **Instant visual clarity**: Turn ideas into realistic room concepts quickly.
+- **Decision acceleration**: Compare original vs. generated design side-by-side.
+- **Simple export flow**: Save and share renders for stakeholders and clients.
+- **Serverless by design**: Core AI workflows run through Puter-powered serverless functionality.
+- **Built for scale**: Modern React Router + Vite architecture with clean modular actions.
 
-### Installation
+## 🧩 Core Experience
 
-Install the dependencies:
+- Upload a room image
+- Generate AI-enhanced interior render
+- Compare before/after with an interactive slider
+- Export final output
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19, React Router 7, TypeScript
+- **Build Tooling**: Vite
+- **UI**: Tailwind CSS, Lucide Icons
+- **AI/Integrations**: `@heyputer/puter.js`
+- **Serverless Layer**: Puter-backed serverless execution for generation and project actions
+
+## 🚀 Quick Start
+
+### 1) Install dependencies
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+### 2) Run in development
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+### 3) Build for production
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+### 4) Start production server
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## 📈 Opportunity
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+Roomify sits at the intersection of AI, design, and real estate enablement—ideal for products focused on home improvement workflows, design previews, and faster purchase confidence.
 
-### DIY Deployment
+## 🤝 Team & Hiring Signal
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+This project demonstrates practical strengths in:
 
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Product-oriented AI UX
+- Frontend architecture and performance-minded implementation
+- Shipping polished, user-facing experiences quickly
 
 ---
 
-Built with ❤️ using React Router.
+**Roomify** — from raw room photos to confident design decisions.
