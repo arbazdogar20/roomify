@@ -32,7 +32,7 @@ export async function fetchAsDataUrl(url: string): Promise<string> {
   });
 }
 
-export const generate3Dview = async ({ sourceImage }: Generate3DViewParams) => {
+export const generate3DView = async ({ sourceImage }: Generate3DViewParams) => {
   const dataUrl = sourceImage.startsWith("data:")
     ? sourceImage
     : await fetchAsDataUrl(sourceImage);
@@ -40,29 +40,23 @@ export const generate3Dview = async ({ sourceImage }: Generate3DViewParams) => {
   const base64Data = dataUrl.split(",")[1];
   const mimeType = dataUrl.split(";")[0].split(":")[1];
 
-  if (!base64Data || !mimeType) throw new Error("Invalid Source Image Payload");
+  if (!mimeType || !base64Data) throw new Error("Invalid source image payload");
 
   const response = await puter.ai.txt2img(ROOMIFY_RENDER_PROMPT, {
     provider: "gemini",
     model: "gemini-2.5-flash-image-preview",
     input_image: base64Data,
     input_image_mime_type: mimeType,
-    ratio: { h: 1024, w: 1024 },
+    ratio: { w: 1024, h: 1024 },
   });
 
-  const rawImageUrl = (response as HTMLImageElement).src || null;
-  if (!rawImageUrl)
-    return {
-      renderedImage: null,
-      renderedPath: undefined,
-    };
+  const rawImageUrl = (response as HTMLImageElement).src ?? null;
 
-  const renderedImage = rawImageUrl.startsWith("data")
+  if (!rawImageUrl) return { renderedImage: null, renderedPath: undefined };
+
+  const renderedImage = rawImageUrl.startsWith("data:")
     ? rawImageUrl
     : await fetchAsDataUrl(rawImageUrl);
 
-  return {
-    renderedImage,
-    renderedPath: undefined,
-  };
+  return { renderedImage, renderedPath: undefined };
 };
